@@ -1,0 +1,70 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "node_modules/.bin/jest",
+    "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest/jest-setup.js"
+    ],
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ],
+    "moduleNameMapper": {
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.11.8",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
+    "csv-builder": "^1.0.1",
+    "date-picker": "^0.5.0",
+    "expo": "^40.0.1",
+    "expo-image-picker": "~9.2.0",
+    "expo-permissions": "~10.0.0",
+    "expo-status-bar": "~1.0.3",
+    "export-to-csv": "^0.2.1",
+    "firebase": "^8.2.9",
+    "fs": "0.0.1-security",
+    "jest-expo": "^40.0.2",
+    "lodash": "^4.17.21",
+    "react": "16.13.1",
+    "react-datepicker": "^3.6.0",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-check-box": "^2.1.7",
+    "react-native-dropdown-picker": "^4.0.9",
+    "react-native-fetch-blob": "^0.10.8",
+    "react-native-gesture-handler": "~1.8.0",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-screens": "^2.18.0",
+    "react-native-tab-view": "^2.15.2",
+    "react-native-web": "^0.15.0",
+    "react-navigation": "^4.4.4",
+    "react-navigation-tabs": "^2.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-native": "^7.2.0",
+    "jest": "^26.6.3",
+    "jest-transform-stub": "^2.0.0",
+    "react-native-reanimated": "^1.13.3",
+    "react-test-renderer": "^16.9.0",
+    "selenium-webdriver": "^4.0.0-beta.2"
+  },
+  "private": true
+}
